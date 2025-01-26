@@ -1,0 +1,19 @@
+/* Estilizacao da homepage */
+
+.conteiner{
+    width: auto;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+}
+
+.loginButton{
+    margin-left: 1000%;
+}

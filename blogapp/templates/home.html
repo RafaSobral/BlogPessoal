@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="conteiner">
+            <h1>Personal Blog Project</h1>
+            <a href="login/">
+                <button class="loginButton">Login</button>
+            </a>
+        </div>
+        {% for artigo in artigos %}
+        <h2><a href="artigo/">{{ artigo.titulo }}</a></h2>
+        {% endfor %}
+
+    </header>
+</body>
+</html>

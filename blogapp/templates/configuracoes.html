@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+</head>
+<body>
+    <h1>Configurações</h1>
+    
+    <!-- Botão para adicionar um novo artigo -->
+    <div class="container">
+        <a href="{% url 'adicionar' %}">
+            <button class="adicionar">Adicionar</button>
+        </a>
+    </div>
+
+    <!-- Lista de artigos -->
+    <div class="artigos">
+        {% for artigo in artigos %}
+            <div class="artigo">
+                <h2>{{ artigo.titulo }}</h2>
+                <p>{{ artigo.conteudo }}</p>
+                
+                <!-- Link para editar o artigo -->
+                <a href="{% url 'editar' artigo.id %}">
+                    <button class="editar">Editar</button>
+                </a>
+            </div>
+        {% empty %}
+            <p>Nenhum artigo encontrado.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

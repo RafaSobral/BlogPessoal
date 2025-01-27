@@ -6,19 +6,64 @@
     <title>Document</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <div class="conteiner">
-            <h1>Personal Blog Project</h1>
-            <a href="login/">
-                <button class="loginButton">Login</button>
-            </a>
+            <a href="" class="BotaoContato">Contato</a>
+            <div class="header-conteiner">
+                <a href="">Resumo</a>
+                <a href="">Projetos</a>
+                <a href="">Sobre mim</a>
+                <a href="login/">Admin</a>
+            </div>
         </div>
-        {% for artigo in artigos %}
-        <h2><a href="artigo/">{{ artigo.titulo }}</a></h2>
-        {% endfor %}
-
     </header>
+    <section>
+        <div class="ConteinerResumo">
+            <div class="textoResumo">
+                <h1>Bem Vindo!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sint repudiandae recusandae illum accusantium, quis voluptatum neque dicta ipsa id incidunt, soluta minus? Mollitia itaque dolorum iure, saepe enim ipsum!</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="h1projeto">Projetos:</h1>
+        <div class="ConteinerProjetos">
+            {% for artigo in artigos %}
+                <div class="moldura">
+                    <h2><a href="{% url 'artigo' artigo.id %}">{{ artigo.titulo }}</a></h2>
+                    {% if artigo.imagem %}
+                        <img src="{{ artigo.imagem.url }}" alt="{{ artigo.titulo }}" style="max-width: 100%;">
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section>
+        <h1 class="h1projeto">Sobremim:</h1>
+        <div class="SobreConteiner">
+            <div class="sobre">
+                <div class="sobreimg">
+                    <img src="" alt="">
+                </div>
+                <div class="sobretexto">
+                    <br>
+                    <br>
+                    <h1>Rafael Sobral</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laboriosam accusantium aperiam cum, iste ea reiciendis est possimus ab nihil, ex aliquam officia blanditiis placeat quia fuga eos veritatis facilis.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="conteinerfooter">
+        <p>&copy; 2025 Rafael Sobral - Todos os direitos reservados</p>
+    </div>
+    </footer>
 </body>
 </html>

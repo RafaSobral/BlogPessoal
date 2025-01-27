@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ artigo.titulo }}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    
-        {% for artigo in artigos %}
-        <h2>{{ artigo.titulo }}</h2>
-        <p>{{ artigo.conteudo }}</p>
-        {{ artigo.data_publicacao }}
-        {% endfor %}
-
+    <h1>{{ artigo.titulo }}</h1>
+    <p>{{ artigo.conteudo }}</p>
+    <p>{{ artigo.data_publicacao }}</p>
+    <p>Última Edição: {{ artigo.data_edicao|date:"d/m/Y H:i" }}</p>
 </body>
 </html>

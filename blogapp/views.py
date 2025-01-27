@@ -6,6 +6,7 @@ from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
 from .forms import ArtigoForm
 from .models import Artigo
+from datetime import datetime
 
 
 # Create your views here.
@@ -15,45 +16,47 @@ def home(request):
     return render(request,'home.html', {'artigos': artigos})
 
 
-def artigo(request):
-    artigos = Artigo.objects.all()
-    return render(request,'artigo.html', {'artigos': artigos})
+def artigo(request, artigo_id):
+    artigo = get_object_or_404(Artigo, id=artigo_id)
+    return render(request, 'artigo.html', {'artigo': artigo}) 
 
 @login_required(login_url="/login/")
 def configuracoes(request):
-    artigos = Artigo.objects.all()  
+    artigos = Artigo.objects.all()
     return render(request, 'configuracoes.html', {'artigos': artigos})
 
 @login_required(login_url="/login/")
 def adicionar(request):
     if request.method == "POST":
         form = ArtigoForm(request.POST)
+        data_atual = datetime.now()  
         if form.is_valid():
             form.save()
-            return redirect('adicionar')
+            return render(request, 'adicionar.html', {'form': form, 'artigo': artigo, 'data_atual': data_atual})
     else:
         form = ArtigoForm()
-    
-    return render(request,'adicionar.html', {'form':form})
+        data_atual = datetime.now()  
+        return render(request, 'adicionar.html', {'form': form, 'data_atual': data_atual})
 
 @login_required(login_url="/login/")
 def editar(request, artigo_id):
-    # Obtém o artigo pelo ID; se não for encontrado, retorna um erro 404
     artigo = get_object_or_404(Artigo, id=artigo_id)
-
     if request.method == "POST":
-        # Cria o formulário com os dados enviados na requisição e vincula ao artigo existente
         form = ArtigoForm(request.POST, instance=artigo)
         if form.is_valid():
-            form.save()  # Salva as alterações no banco de dados
-            return redirect('configuracoes')  # Redireciona para a página de configurações
+            form.save()  
+            return redirect('configuracoes')  
     else:
-        # Cria o formulário com os dados do artigo existente para edição
         form = ArtigoForm(instance=artigo)
+        data_atual = datetime.now() 
+    return render(request, 'editar.html', {'form': form, 'artigo': artigo, 'data_atual': data_atual})
 
-    # Renderiza a página de edição com o formulário e o artigo
-    return render(request, 'editar.html', {'form': form, 'artigo': artigo})
 
+@login_required(login_url="/login/")
+def deletar(request, artigo_id):
+    artigo = get_object_or_404(Artigo, id=artigo_id)
+    artigo.delete()
+    return redirect('configuracoes')
 
 
 def login(request):
@@ -66,7 +69,7 @@ def login(request):
         user = authenticate(username=username, password=senha )
         if user:
             login_django(request, user)
-            return render(request, 'configuracoes.html')
+            return redirect('configuracoes')
         else:
             return HttpResponse("Email ou senha invalidos")
 

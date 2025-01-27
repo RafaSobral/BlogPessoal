@@ -1,19 +1,513 @@
 /* Estilizacao da homepage */
 
+body {
+    background-image: url('../imagens/background.jpg');
+    background-size: cover;
+    background-repeat: repeat; 
+    background-position: center; 
+  }
+
 .conteiner{
     width: auto;
     height: 40px;
-    border: 1px solid black;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 5%;
+    padding-top: 2%;
+    gap: 20px;
+    /* border: 1px solid white; */
+}
+
+.header-conteiner{
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+  }
+
+.BotaoContato{
+    border-radius: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+
+/* Estilizaçao da Section Resumo */
+
+.ConteinerResumo{
+    width: 1100px;
+    height: 400px;
+    /* border: 1px solid white; */
+    display: flex;
+    padding-top: 5%;
+    padding-right: 5%;
+    background: rgba(255, 255, 255, 0.062); 
+    backdrop-filter: blur(1px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 6%;
+}
+
+.textoResumo h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-align: left;
+}
+
+.textoResumo{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 60%;
+    text-align: left;
+}
+
+/* Estilizacao Section Projetos */
+
+.ConteinerProjetos{
+    display: grid;
+    /* border: 1px solid white; */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+    padding-left: 8%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.h1projeto{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 45%;
+}
+
+.moldura{
+    width: 200px;
+    height: 300px;
+    /* border: 1px solid white; */
+    text-align: left;
+    position: relative;
+    margin-bottom: 20%;
+    background: rgba(255, 255, 255, 0.062); /* Cor de fundo semitransparente */
+    backdrop-filter: blur(1px); /* Desfoque do fundo */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+.moldura h2{
+    position: absolute;
+    top: 20%; 
+    left: -15%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.SobreConteiner{
+    width: auto;
+    height: 500px;
+    display: flex;
+    /* border: 1px solid white; */
     justify-content: center;
 }
 
-h1{
-    text-align: center;
-    margin: 0;
+
+.sobre{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.062); 
+    backdrop-filter: blur(1px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-.loginButton{
-    margin-left: 1000%;
+.sobretexto{
+    /* border: 1px solid white; */
+    color: white;
+    text-align: left;
+    width: 500px;
+    height: 500px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 50%;
+    text-align: left;
+}
+
+.sobretexto h1{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    text-align: left;
+}
+
+.conteinerfooter{
+    width: auto;
+    height: 50px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    background: rgba(0, 0, 0, 0.521); 
+    backdrop-filter: blur(1px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizacao do Login */
+
+
+.conteinerlogin{
+    width: 95%;
+    height: 700px;
+    /* border: 1px solid white; */
+    display: grid;
+    padding: 2%;
+    justify-content: center;
+
+}
+
+.login{
+    width: 400px;
+    height: 250px;
+    /* border: 1px solid white; */
+    display: flex;
+    background: rgba(255, 255, 255, 0.062); 
+    backdrop-filter: blur(1px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    margin-top: 20%;
+    padding-top: 10%;
+
+}
+
+.input{
+    width: 300px;
+    height: 35px;
+    margin-top: 10%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.363); 
+    backdrop-filter: blur(1px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 12%;
+}
+
+.botaologin{
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Cor de fundo semitransparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave e semitransparente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave para interações */
+    cursor: pointer;
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+.login a button{
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Cor de fundo semitransparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave e semitransparente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave para interações */
+    cursor: pointer;
+    margin-top: 175px;
+    margin-left: -150%;
+}
+
+/* estilizacao das configuracoes */
+
+.containerconfig .adicionar{
+    margin-left: 600px; /* Espaço entre os botões */
+    padding: 8px 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+     background-color: #4CAF50; /* Cor verde para o botão de editar */
+    color: white;
+}
+
+.artigos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os artigos */
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+.artigo {
+    display: flex;
+    justify-content: space-between; /* Alinha o conteúdo do artigo nas extremidades */
+    align-items: center; /* Alinha os botões verticalmente no centro */
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Fundo semitransparente para destacar os artigos */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de profundidade */
+}
+
+.artigo h2 {
+    margin-right: auto; /* Garante que o título fique alinhado à esquerda */
+}
+
+.botaoeditar, .botaodeletar {
+    margin-left: 10px; /* Espaço entre os botões */
+    padding: 8px 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.botaoeditar {
+    background-color: #4CAF50; /* Cor verde para o botão de editar */
+    color: white;
+}
+
+.botaodeletar {
+    background-color: #F44336; /* Cor vermelha para o botão de deletar */
+    color: white;
+}
+
+.containerconfig{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.containerconfig h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+.containerconfig button{
+    margin-left: 10px; /* Espaço entre os botões */
+    padding: 8px 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+     background-color: #4CAF50; /* Cor verde para o botão de editar */
+    color: white;
+}
+
+.conteinerconfiguracoes{
+    width: 1000px;
+    margin-left: 13%;
+    margin-top: 5%;
+}
+
+/* estilizacao da pagina de adicionar  */
+
+/* Estilos para a página Adicionar Artigo */
+body.adicionar-artigo {
+    background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+body.adicionar-artigo h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Centralizando o Formulário */
+body.adicionar-artigo form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); /* Cor de fundo semitransparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave e semitransparente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave para interações */
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    align-items: center; /* Centraliza os itens dentro do formulário */
+    justify-content: center; /* Centraliza os itens no eixo vertical */
+}
+
+/* Estilo para a Data */
+body.adicionar-artigo .date {
+    color: rgb(255, 255, 255); /* Verde para a data */
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para os campos de input */
+body.adicionar-artigo input[type="text"],
+body.adicionar-artigo textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff65; /* Fundo verde claro */
+    transition: all 0.3s ease;
+    width: 100%; /* Faz com que ocupe a largura disponível */
+    max-width: 500px; /* Limita a largura máxima */
+    margin-bottom: 15px;
+}
+
+body.adicionar-artigo input[type="text"]:focus,
+body.adicionar-artigo textarea:focus {
+    border-color: green; /* Cor da borda quando o campo estiver em foco */
+    outline: none;
+}
+
+/* Estilo para o botão */
+body.adicionar-artigo button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: green; /* Cor de fundo verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 500px; /* Limita a largura máxima do botão */
+}
+
+body.adicionar-artigo button:hover {
+    background-color: darkgreen; /* Tom mais escuro de verde quando o botão é pressionado */
+}
+
+body.adicionar-artigo textarea {
+    resize: vertical; /* Permite redimensionar o campo de texto */
+}
+
+/* Adicionar um pouco de margem para o título */
+body.adicionar-artigo form p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+/* estilizacao da pagina de editar  */
+
+/* Estilos para a página Editar Artigo */
+body.editar-artigo {
+    background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+body.editar-artigo h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Centralizando o Formulário */
+body.editar-artigo form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); /* Cor de fundo semitransparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave e semitransparente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave para interações */
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    align-items: center; /* Centraliza os itens dentro do formulário */
+    justify-content: center; /* Centraliza os itens no eixo vertical */
+}
+
+/* Estilo para a Data */
+body.editar-artigo .date {
+    color: rgb(255, 255, 255); /* Verde para a data */
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para os campos de input */
+body.editar-artigo input[type="text"],
+body.editar-artigo textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff65; /* Fundo verde claro */
+    transition: all 0.3s ease;
+    width: 100%; /* Faz com que ocupe a largura disponível */
+    max-width: 500px; /* Limita a largura máxima */
+    margin-bottom: 15px;
+}
+
+body.editar-artigo input[type="text"]:focus,
+body.editar-artigo textarea:focus {
+    border-color: green; /* Cor da borda quando o campo estiver em foco */
+    outline: none;
+}
+
+/* Estilo para o botão */
+
+body.editar-artigo button:hover {
+    background-color: darkgreen; /* Tom mais escuro de verde quando o botão é pressionado */
+}
+
+/* Adicionar um pouco de margem para o título */
+body.editar-artigo form p {
+    color: white;
+    margin-bottom: 20px;
 }

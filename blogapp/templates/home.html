@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -24,9 +24,26 @@
     </header>
     <section>
         <div class="ConteinerResumo">
+            <div class="carrossel">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="{% static 'imagens/html-icon.png' %}" alt="HTML"></div>
+                        <div class="swiper-slide"><img src="{% static 'imagens/css-icon.png' %}" alt="CSS"></div>
+                        <div class="swiper-slide"><img src="{% static 'imagens/js-icon.png' %}" alt="JavaScript"></div>
+                        <div class="swiper-slide"><img src="{% static 'imagens/python-icon.png' %}" alt="Python"></div>
+                        <div class="swiper-slide"><img src="{% static 'imagens/django-icon.png' %}" alt="Django"></div>
+                    </div>
+                    <!-- Adicione os botões de navegação -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Adicione a paginação -->
+                    <div class="swiper-pagination"></div>
+                </div>                
+            </div>
             <div class="textoResumo">
                 <h1>Bem Vindo!</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sint repudiandae recusandae illum accusantium, quis voluptatum neque dicta ipsa id incidunt, soluta minus? Mollitia itaque dolorum iure, saepe enim ipsum!</p>
+                <p>Aqui compartilho minha jornada como programador. <br> Você encontrará detalhes sobre meus projetos, estudos, e habilidades na área de desenvolvimento. <br> Além disso, vou falar um pouco sobre mim e dividir aprendizados que podem ajudar outros a crescerem na programação. br Explore à vontade e entre em contato se quiser trocar ideias!</p>
             </div>
         </div>
     </section>
@@ -44,18 +61,42 @@
         </div>
     </section>
     <section>
-        <h1 class="h1projeto">Sobremim:</h1>
+        <!-- <h1 class="h1projeto">Sobremim:</h1> -->
         <div class="SobreConteiner">
             <div class="sobre">
-                <div class="sobreimg">
-                    <img src="" alt="">
-                </div>
+                <!-- <<div class="sobreimg">
+                    <img src="{% static 'imagens/foto3.png' %}" alt="Imagem">
+                </div> -->
                 <div class="sobretexto">
                     <br>
                     <br>
                     <h1>Rafael Sobral</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laboriosam accusantium aperiam cum, iste ea reiciendis est possimus ab nihil, ex aliquam officia blanditiis placeat quia fuga eos veritatis facilis.</p>
-
+                    <p>  Iniciei minha jornada profissional como freelancer em montagem e manutenção de computadores. Logo após, tive um empreendimento online. Durante esse período, desenvolvi um interesse pela programação e comecei a estudar desenvolvimento web, utilizando Python e Django. Atualmente, estou focado em aprimorar meu inglês e expandir meus conhecimentos em BackEnd e SQL.
+                        <br>Gostou de algum tema? Vamos conversar! 💬</p>
+                        <div class="botoes-sociais">
+                            <a href="https://www.linkedin.com/in/rafasobral/" target="_blank" class="botao linkedin">
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/RafaSobral" target="_blank" class="botao github">
+                                GitHub
+                            </a>
+                        </div>
+                </div>
+                <div class="sobretexto2">
+                    <h3>Sobre mim:</h3>
+                    <ul>
+                        <li>Graduação: UniLasalle (Sistemas de informação) <br> 3° Periodo, Noite.</li>
+                        <li>Idade: 24 Anos</li>
+                        <li>Cidade: Maricá/Rio de Janeiro</li>
+                    </ul>
+                    <h3>Minhas Habilidades:</h3>
+                    <ul>
+                        <li>Desenvolvimento Web (HTML, CSS, JavaScript)</li>
+                        <li>Backend com Django</li>
+                        <li>Banco de Dados (SQL)</li>
+                        <li>Manutenção de computadores</li>
+                        <li>Inglês técnico</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -65,5 +106,25 @@
         <p>&copy; 2025 Rafael Sobral - Todos os direitos reservados</p>
     </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
 </body>
 </html>

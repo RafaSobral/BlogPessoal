@@ -27,12 +27,13 @@
             <div class="carrossel">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide"><img src="{% static 'imagens/html-icon.png' %}" alt="HTML"></div>
-                        <div class="swiper-slide"><img src="{% static 'imagens/css-icon.png' %}" alt="CSS"></div>
-                        <div class="swiper-slide"><img src="{% static 'imagens/js-icon.png' %}" alt="JavaScript"></div>
-                        <div class="swiper-slide"><img src="{% static 'imagens/python-icon.png' %}" alt="Python"></div>
-                        <div class="swiper-slide"><img src="{% static 'imagens/django-icon.png' %}" alt="Django"></div>
+                        {% for artigo in ultimos_artigos %}
+                            {% if artigo.imagem %}
+                                <div class="swiper-slide">
+                                    <img src="{{ artigo.imagem.url }}" alt="{{ artigo.titulo }}">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <!-- Adicione os botões de navegação -->
                     <div class="swiper-button-next"></div>
@@ -91,9 +92,9 @@
                     </ul>
                     <h3>Minhas Habilidades:</h3>
                     <ul>
-                        <li>Desenvolvimento Web (HTML, CSS, JavaScript)</li>
                         <li>Backend com Django</li>
                         <li>Banco de Dados (SQL)</li>
+                        <li>Desenvolvimento Web (HTML, CSS, JavaScript)</li>
                         <li>Manutenção de computadores</li>
                         <li>Inglês técnico</li>
                     </ul>
@@ -109,8 +110,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper('.swiper', {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 1,
+        spaceBetween: 10,
         loop: true,
         autoplay: {
             delay: 2000,

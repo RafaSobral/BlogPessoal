@@ -13,7 +13,8 @@ from datetime import datetime
 
 def home(request):
     artigos = Artigo.objects.all()
-    return render(request,'home.html', {'artigos': artigos})
+    ultimos_artigos = Artigo.objects.order_by('data_publicacao')[:5]
+    return render(request, 'home.html', {'artigos': artigos, 'ultimos_artigos': ultimos_artigos})
 
 
 def artigo(request, artigo_id):
@@ -28,7 +29,7 @@ def configuracoes(request):
 @login_required(login_url="/login/")
 def adicionar(request):
     if request.method == "POST":
-        form = ArtigoForm(request.POST)
+        form = ArtigoForm(request.POST, request.FILES)
         data_atual = datetime.now()  
         if form.is_valid():
             form.save()

@@ -13,43 +13,28 @@
 <body>
     <header>
         <div class="conteiner">
-            <a href="" class="BotaoContato">Contato</a>
+            <a href="" class="BotaoContato">Estação Skate</a>
             <div class="header-conteiner">
-                <a href="">Resumo</a>
-                <a href="">Projetos</a>
-                <a href="">Sobre mim</a>
+                <a href="#resumo">Resumo</a>
+                <a href="#artigos">Artigos</a>
+                <a href="#sobre">Sobre</a>
                 <a href="login/">Admin</a>
             </div>
         </div>
     </header>
-    <section>
+    <section id="resumo">
         <div class="ConteinerResumo">
             <div class="carrossel">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        {% for artigo in ultimos_artigos %}
-                            {% if artigo.imagem %}
-                                <div class="swiper-slide">
-                                    <img src="{{ artigo.imagem.url }}" alt="{{ artigo.titulo }}">
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <!-- Adicione os botões de navegação -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <!-- Adicione a paginação -->
-                    <div class="swiper-pagination"></div>
-                </div>                
+                <img src="/media/Foto4.png" alt="Logo">
             </div>
             <div class="textoResumo">
-                <h1>Bem Vindo!</h1>
-                <p>Aqui compartilho minha jornada como programador. <br> Você encontrará detalhes sobre meus projetos, estudos, e habilidades na área de desenvolvimento. <br> Além disso, vou falar um pouco sobre mim e dividir aprendizados que podem ajudar outros a crescerem na programação. br Explore à vontade e entre em contato se quiser trocar ideias!</p>
+                <h1>Skate que transforma!</h1>
+                <p>Estação Skate é uma organização social que transforma realidades por meio da cultura do skate.  no coração do Complexo do Alemão,   a ONG utiliza o skate como principal ferramenta de inclusão, educação  e lazer, oferecendo a crianças e adolescentes um espaço seguro para crescer, aprender e sonhar.</p>
             </div>
         </div>
     </section>
-    <section>
-        <h1 class="h1projeto">Projetos:</h1>
+    <section id="artigos">
+        <h1 class="h1projeto">Artigos:</h1>
         <div class="ConteinerProjetos">
             {% for artigo in artigos %}
                 <div class="moldura">
@@ -61,50 +46,38 @@
             {% endfor %}
         </div>
     </section>
-    <section>
-        <!-- <h1 class="h1projeto">Sobremim:</h1> -->
+    <section id="sobre">
         <div class="SobreConteiner">
             <div class="sobre">
-                <!-- <<div class="sobreimg">
-                    <img src="{% static 'imagens/foto3.png' %}" alt="Imagem">
-                </div> -->
                 <div class="sobretexto">
                     <br>
                     <br>
-                    <h1>Rafael Sobral</h1>
-                    <p>  Iniciei minha jornada profissional como freelancer em montagem e manutenção de computadores. Logo após, tive um empreendimento online. Durante esse período, desenvolvi um interesse pela programação e comecei a estudar desenvolvimento web, utilizando Python e Django. Atualmente, estou focado em aprimorar meu inglês e expandir meus conhecimentos em BackEnd e SQL.
-                        <br>Gostou de algum tema? Vamos conversar! 💬</p>
+                    <h1>"Tudo começou com a minha filha"</h1>
+                    <h2>Jacob Cassiano de Oliveira</h2>
+                    <p> Inspirado pela paixão da filha de Jacob 
+                        pelo skate, o trabalho desenvolvido pelo 
+                        projeto Estação Skate usa o esporte 
+                        como principal ferramenta de introdução 
+                        à cultura e ao lazer, viabilizando o 
+                        preparo de jovens do Complexo do 
+                        Alemão para o pleno exercício de 
+                        sua cidadania
+                       </p>
                         <div class="botoes-sociais">
-                            <a href="https://www.linkedin.com/in/rafasobral/" target="_blank" class="botao linkedin">
-                                LinkedIn
-                            </a>
-                            <a href="https://github.com/RafaSobral" target="_blank" class="botao github">
-                                GitHub
+                            <a href="https://www.instagram.com/estacao.skate?utm_source=qr&igsh=dGFuc2sxN3B3N3A%3D" target="_blank" class="botao linkedin">
+                                Instagram
                             </a>
                         </div>
                 </div>
-                <div class="sobretexto2">
-                    <h3>Sobre mim:</h3>
-                    <ul>
-                        <li>Graduação: UniLasalle (Sistemas de informação) <br> 3° Periodo, Noite.</li>
-                        <li>Idade: 24 Anos</li>
-                        <li>Cidade: Maricá/Rio de Janeiro</li>
-                    </ul>
-                    <h3>Minhas Habilidades:</h3>
-                    <ul>
-                        <li>Backend com Django</li>
-                        <li>Banco de Dados (SQL)</li>
-                        <li>Desenvolvimento Web (HTML, CSS, JavaScript)</li>
-                        <li>Manutenção de computadores</li>
-                        <li>Inglês técnico</li>
-                    </ul>
+                <div class="sobretexto2" style="text-align: center;">
+                    <img src="/media/jacob.png" alt="Jacob C. de Oliveira" style="max-width: 100%; height: auto;">
                 </div>
             </div>
         </div>
     </section>
     <footer>
         <div class="conteinerfooter">
-        <p>&copy; 2025 Rafael Sobral - Todos os direitos reservados</p>
+        <p>&copy; 2025 Estação Skate - Todos os direitos reservados</p>
     </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

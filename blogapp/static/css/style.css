@@ -1,7 +1,12 @@
 /* Estilizacao da homepage */
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
-    background-image: url('../imagens/background.jpg');
+    background-image: url('../imagens/foto10.jpg');
     background-size: cover;
     background-repeat: repeat; 
     background-position: center; 
@@ -17,7 +22,6 @@ body {
     padding-right: 5%;
     padding-top: 2%;
     gap: 20px;
-    /* border: 1px solid white; */
 }
 
 .header-conteiner{
@@ -51,15 +55,17 @@ a {
 .ConteinerResumo{
     width: 1100px;
     height: 400px;
-    /* border: 1px solid white; */
     display: flex;
-    padding-top: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     padding-right: 5%;
+    padding-left: 2%;
     background: rgba(255, 255, 255, 0.062); 
     backdrop-filter: blur(10px); 
     border-radius: 15px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-left: 6%;
+    margin-top: 3%;
 }
 
 .carrossel {
@@ -70,42 +76,13 @@ a {
     align-items: center;
 }
 
-/* Altera a cor dos botões de navegação */
-.swiper-button-next, 
-.swiper-button-prev {
-    color: #FF6600; /* Cor laranja, altere conforme necessário */
+.carrossel img {
+    width: 600px;
+    height: 400px;
+    border-radius: 15px;
 }
 
-/* Ajusta o tamanho e a visibilidade dos botões */
-.swiper-button-next::after, 
-.swiper-button-prev::after {
-    font-size: 30px; /* Tamanho do ícone */
-}
 
-.swiper {
-    width: 60%;
-    height: 100%;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.swiper-slide img {
-    width: 200px;
-    height: 300px;
-    object-fit: contain;
-    border-radius: 10%;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.swiper-slide img:hover {
-    transform: scale(1.2);
-}
 
 .textoResumo h1{
     color: white;
@@ -118,42 +95,49 @@ a {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 17px;
-    /* margin-left: 15%; */
     text-align: left;
+    padding-left: 3%;
 }
 
 /* Estilizacao Section Projetos */
 
 .ConteinerProjetos{
     display: grid;
-    /* border: 1px solid white; */
     grid-template-columns: repeat(4, 1fr); 
     gap: 10px; 
     padding-left: 8%;
-    padding-top: 2%;
     padding-bottom: 5%;
+    
 }
 
 .h1projeto{
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 45%;
+    padding-top: 5%;
 }
 
 .moldura{
     cursor: pointer;
     width: 200px;
     height: 300px;
-    /* border: 1px solid white; */
     text-align: left;
     position: relative;
     margin-bottom: 20%;
-    background: rgba(255, 255, 255, 0.062); /* Cor de fundo semitransparente */
-    backdrop-filter: blur(1px); /* Desfoque do fundo */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background: rgba(255, 255, 255, 0.062); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
+.moldura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; 
+}
+
 
 .moldura :hover {
     transition: transform 0.3s ease;
@@ -173,7 +157,6 @@ a {
     width: auto;
     height: 500px;
     display: flex;
-    /* border: 1px solid white; */
     justify-content: center;
 }
 
@@ -184,43 +167,30 @@ a {
     background: rgba(255, 255, 255, 0.062); 
     backdrop-filter: blur(10px); 
     border-radius: 15px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .sobretexto2 {
-    width: 500px;
-    height: auto; /* Ajusta a altura de acordo com o conteúdo */
-    padding: 20px; /* Adiciona espaço interno */
-    border-radius: 8px;
-    font-family: 'Raleway', sans-serif;
-    color: #ffffff; /* Cor do texto */
-    overflow: hidden; /* Para evitar que conteúdo extra transborde */
+  width: 450px;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;        
+  padding-left: 100px;         
+  padding-right: 30px;
 }
 
-.sobretexto2 h3 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    color: #ffffff; /* Destaque para o título */
-}
 
-.sobretexto2 ul {
-    list-style: square; /* Estilo dos marcadores */
-    padding-left: 20px; /* Recuo para alinhar os itens */
-}
-
-.sobretexto2 li {
-    margin-bottom: 5px; /* Espaço entre os itens */
-    line-height: 1.5; /* Melhor espaçamento entre linhas */
-}
-
-.sobretexto2 ul li::marker {
-    color: orange; /* Define a cor dos marcadores */
-    font-size: 1.2em; /* Ajusta o tamanho dos marcadores, se quiser */
+.sobretexto2 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  
 }
 
 
 .sobretexto{
-    /* border: 1px solid white; */
     color: white;
     text-align: left;
     width: 550px;
@@ -254,7 +224,7 @@ a {
 
 .botoes-sociais {
     display: flex;
-    gap: 15px; /* Espaço entre os botões */
+    gap: 15px; 
 }
 
 .botao {
@@ -269,20 +239,164 @@ a {
 }
 
 .botao.linkedin:hover {
-    background-color: #0a66c2; /* Cor do LinkedIn */
-}
+    background-color: #0a66c2; 
 
 .botao.linkedin {
-    background-color: #004182; /* Cor ao passar o mouse */
+    background-color: #004182; 
+
+
+/* Responsividade para tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .ConteinerResumo {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
+  }
+
+  .carrossel {
+    width: 100%;
+    height: auto;
+  }
+
+  .carrossel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .textoResumo {
+    padding-left: 0;
+    padding-top: 20px;
+    font-size: 16px;
+  }
+
+  .header-conteiner {
+    margin-left: 40%;
+    gap: 20px;
+  }
+
+  .ConteinerProjetos {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 5%;
+  }
+
+  .h1projeto {
+    margin-left: 35%;
+  }
+
+  .sobre {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  .sobretexto2 {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .sobretexto {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
 }
 
-.botao.github {
-    background-color: #202020; /* Cor do GitHub */
+/* Responsividade para celulares (até 768px) */
+@media (max-width: 768px) {
+  .conteiner {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .header-conteiner {
+    flex-direction: column;
+    position: static;
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .BotaoContato {
+    position: static;
+    font-size: 16px;
+  }
+
+  .ConteinerResumo {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10%;
+  }
+
+  .carrossel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .textoResumo h1 {
+    font-size: 30px;
+  }
+
+  .ConteinerProjetos {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    gap: 20px;
+  }
+
+  .h1projeto {
+    font-size: 24px;
+    margin-left: 40%;
+  }
+
+  .moldura {
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+  }
+
+
+  .sobre {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .sobretexto, .sobretexto2 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .sobretexto h1 {
+    font-size: 30px;
+  }
+
+  .conteinerfooter {
+    font-size: 16px;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    margin-top: 100%;
+  }
+
+  .botoes-sociais {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .botao {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
 }
 
-.botao.github:hover {
-    background-color: #000; /* Cor ao passar o mouse */
-}
+
 
 
 /* Estilizacao do Login */
@@ -291,7 +405,6 @@ a {
 .conteinerlogin{
     width: 95%;
     height: 700px;
-    /* border: 1px solid white; */
     display: grid;
     padding: 2%;
     justify-content: center;
@@ -301,7 +414,6 @@ a {
 .login{
     width: 400px;
     height: 250px;
-    /* border: 1px solid white; */
     display: flex;
     background: rgba(255, 255, 255, 0.062); 
     backdrop-filter: blur(1px); 
@@ -334,11 +446,11 @@ a {
     text-align: center;
     text-decoration: none;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Cor de fundo semitransparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave e semitransparente */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: all 0.3s ease; /* Transição suave para interações */
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
     cursor: pointer;
     margin-top: 10%;
     margin-left: 15%;
@@ -353,11 +465,11 @@ a {
     text-align: center;
     text-decoration: none;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Cor de fundo semitransparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave e semitransparente */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: all 0.3s ease; /* Transição suave para interações */
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; 
     cursor: pointer;
     margin-top: 175px;
     margin-left: -150%;
@@ -366,21 +478,20 @@ a {
 /* estilizacao das configuracoes */
 
 .containerconfig .adicionar{
-    margin-left: 600px; /* Espaço entre os botões */
-    padding: 8px 15px;
+    margin-left: 600px; /
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-     background-color: #4CAF50; /* Cor verde para o botão de editar */
+     background-color: #4CAF50; 
     color: white;
 }
 
 .artigos {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espaçamento entre os artigos */
+    gap: 15px; 
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
@@ -389,20 +500,20 @@ a {
 
 .artigo {
     display: flex;
-    justify-content: space-between; /* Alinha o conteúdo do artigo nas extremidades */
-    align-items: center; /* Alinha os botões verticalmente no centro */
+    justify-content: space-between; 
+    align-items: center; 
     padding: 5px;
-    background: rgba(255, 255, 255, 0.1); /* Fundo semitransparente para destacar os artigos */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de profundidade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .artigo h2 {
-    margin-right: auto; /* Garante que o título fique alinhado à esquerda */
+    margin-right: auto; 
 }
 
 .botaoeditar, .botaodeletar {
-    margin-left: 10px; /* Espaço entre os botões */
+    margin-left: 10px; 
     padding: 8px 15px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -412,12 +523,12 @@ a {
 }
 
 .botaoeditar {
-    background-color: #4CAF50; /* Cor verde para o botão de editar */
+    background-color: #4CAF50; 
     color: white;
 }
 
 .botaodeletar {
-    background-color: #F44336; /* Cor vermelha para o botão de deletar */
+    background-color: #F44336; 
     color: white;
 }
 
@@ -434,14 +545,14 @@ a {
 }
 
 .containerconfig button{
-    margin-left: 10px; /* Espaço entre os botões */
+    margin-left: 10px; 
     padding: 8px 15px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-     background-color: #4CAF50; /* Cor verde para o botão de editar */
+     background-color: #4CAF50;
     color: white;
 }
 
@@ -451,9 +562,8 @@ a {
     margin-top: 5%;
 }
 
-/* estilizacao da pagina de adicionar  */
 
-/* Estilos para a página Adicionar Artigo */
+/* Estilizacao página Adicionar Artigo */
 body.adicionar-artigo {
     background-color: #ffffff;
     font-family: 'Raleway', sans-serif;
@@ -473,58 +583,57 @@ body.adicionar-artigo h1 {
     text-align: center;
 }
 
-/* Centralizando o Formulário */
 body.adicionar-artigo form {
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1); /* Cor de fundo semitransparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave e semitransparente */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: all 0.3s ease; /* Transição suave para interações */
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
     height: 500px;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
     max-width: 600px;
-    align-items: center; /* Centraliza os itens dentro do formulário */
-    justify-content: center; /* Centraliza os itens no eixo vertical */
+    align-items: center; 
+    justify-content: center; 
 }
 
-/* Estilo para a Data */
+
 body.adicionar-artigo .date {
-    color: rgb(255, 255, 255); /* Verde para a data */
+    color: rgb(255, 255, 255); 
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Estilo para os campos de input */
+
 body.adicionar-artigo input[type="text"],
 body.adicionar-artigo textarea {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #ffffff65; /* Fundo verde claro */
+    background-color: #ffffff65; 
     transition: all 0.3s ease;
-    width: 100%; /* Faz com que ocupe a largura disponível */
-    max-width: 500px; /* Limita a largura máxima */
+    width: 100%; 
+    max-width: 500px; 
     margin-bottom: 15px;
 }
 
 body.adicionar-artigo input[type="text"]:focus,
 body.adicionar-artigo textarea:focus {
-    border-color: green; /* Cor da borda quando o campo estiver em foco */
+    border-color: green;
     outline: none;
 }
 
-/* Estilo para o botão */
+
 body.adicionar-artigo button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: green; /* Cor de fundo verde */
+    background-color: green; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -532,18 +641,18 @@ body.adicionar-artigo button {
     font-weight: bold;
     transition: background-color 0.3s ease;
     width: 100%;
-    max-width: 500px; /* Limita a largura máxima do botão */
+    max-width: 500px; 
 }
 
 body.adicionar-artigo button:hover {
-    background-color: darkgreen; /* Tom mais escuro de verde quando o botão é pressionado */
+    background-color: darkgreen; 
 }
 
 body.adicionar-artigo textarea {
-    resize: vertical; /* Permite redimensionar o campo de texto */
+    resize: vertical;
 }
 
-/* Adicionar um pouco de margem para o título */
+
 body.adicionar-artigo form p {
     color: white;
     margin-bottom: 20px;
@@ -552,7 +661,6 @@ body.adicionar-artigo form p {
 
 /* estilizacao da pagina de editar  */
 
-/* Estilos para a página Editar Artigo */
 body.editar-artigo {
     background-color: #ffffff;
     font-family: 'Raleway', sans-serif;
@@ -572,27 +680,26 @@ body.editar-artigo h1 {
     text-align: center;
 }
 
-/* Centralizando o Formulário */
 body.editar-artigo form {
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1); /* Cor de fundo semitransparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave e semitransparente */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: all 0.3s ease; /* Transição suave para interações */
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
     height: 500px;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
     max-width: 600px;
-    align-items: center; /* Centraliza os itens dentro do formulário */
-    justify-content: center; /* Centraliza os itens no eixo vertical */
+    align-items: center; 
+    justify-content: center; 
 }
 
 /* Estilo para a Data */
 body.editar-artigo .date {
-    color: rgb(255, 255, 255); /* Verde para a data */
+    color: rgb(255, 255, 255); 
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
@@ -606,27 +713,101 @@ body.editar-artigo textarea {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #ffffff65; /* Fundo verde claro */
+    background-color: #ffffff65;
     transition: all 0.3s ease;
-    width: 100%; /* Faz com que ocupe a largura disponível */
-    max-width: 500px; /* Limita a largura máxima */
+    width: 100%; 
+    max-width: 500px; 
     margin-bottom: 15px;
 }
 
 body.editar-artigo input[type="text"]:focus,
 body.editar-artigo textarea:focus {
-    border-color: green; /* Cor da borda quando o campo estiver em foco */
+    border-color: green; 
     outline: none;
 }
 
 /* Estilo para o botão */
 
 body.editar-artigo button:hover {
-    background-color: darkgreen; /* Tom mais escuro de verde quando o botão é pressionado */
+    background-color: darkgreen; 
 }
 
-/* Adicionar um pouco de margem para o título */
+
 body.editar-artigo form p {
     color: white;
     margin-bottom: 20px;
+}
+
+
+
+.bg {
+    background-image: url('../imagens/foto10.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* Navbar simples no topo */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0 0 20px 20px;
+}
+
+.navbar h2 {
+    font-size: 24px;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Container central */
+.artigo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+    
+}
+
+/* Cartão de conteúdo */
+.artigo-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+    text-align: center; 
+}
+
+.artigo-card h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.artigo-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.artigo-card img {
+    width: auto;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
+    align-items: center;
 }
